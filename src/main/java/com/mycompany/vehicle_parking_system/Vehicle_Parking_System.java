@@ -65,16 +65,16 @@ public class Vehicle_Parking_System {
 
     private static Vehicle createVehicle(String type, String id) {
         if ("Bus".equalsIgnoreCase(type)) {
-            return new Car(id);
-        }
-        if ("Car".equalsIgnoreCase(type)) {
-            return new Truck(id);
-        }
-        if ("Motorcycle".equalsIgnoreCase(type)) {
             return new Bus(id);
         }
-        if ("Truck".equalsIgnoreCase(type)) {
+        if ("Car".equalsIgnoreCase(type)) {
+            return new Car(id);
+        }
+        if ("Motorcycle".equalsIgnoreCase(type)) {
             return new Motorcycle(id);
+        }
+        if ("Truck".equalsIgnoreCase(type)) {
+            return new Truck(id);
         }
         return null;
     }
